@@ -22,3 +22,9 @@
 - data.pptx presentation
 - Hardware demonstration materials
 - Software installation guides
+
+## Lab Exercises
+- **Interactive SQL Lab**: [Google Colab Notebook](https://colab.research.google.com/drive/1XLARWDjX_nBdXyxHixl9XcGeCEfvz44_#scrollTo=hM9Cr0yvHNqm)
+  - Hands-on practice with advanced SQL features
+  - Interactive exercises for views, triggers, and stored procedures
+  - Real-world database scenarios and examples
