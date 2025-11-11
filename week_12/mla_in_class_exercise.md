@@ -27,7 +27,7 @@ Purpose: Build a complete MLA-formatted page from scratch, practice citing three
    - Copy key metadata: author(s), title, container (journal/site), publisher, date, page range or URL, DOI if available.
 
 3. **In-text citation practice**
-   - Draft one paragraph (6-8 sentences) answering: *How does responsible technology use impact students today?*
+   - Draft one paragraph (6-8 sentences) on the topic of your choice
    - Integrate at least **two** of your sources:
      - Use one **short quotation** with a signal phrase.
      - Paraphrase another idea and cite it parenthetically.
