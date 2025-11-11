@@ -28,7 +28,7 @@ Purpose: Build a complete MLA-formatted page from scratch, practice citing three
 
 3. **In-text citation practice**
    - Draft one paragraph (6-8 sentences) on the topic of your choice
-   - Integrate at least **two** of your sources:
+   - Integrate at least **three** of your sources:
      - Use one **short quotation** with a signal phrase.
      - Paraphrase another idea and cite it parenthetically.
    - Follow Purdue OWL guidance for page numbers, punctuation, and hanging indents. Highlight citations so you can check them later.
