@@ -10,6 +10,7 @@ This course introduces students to fundamental computing concepts, computer syst
 - **Week 2**: [Data and Information](./Week%202/README.md) 
 - **Week 3**: [Computer Systems and Software](./Week_3/README.md)
 - **Week 12**: [MLA Formatting and Research Launch](./week_12/README.md)
+- **Week 14**: [Research Paper Drafting Workshop](./week_14/README.md)
 
 ## Learning Objectives
 

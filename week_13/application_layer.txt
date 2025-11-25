@@ -1,0 +1,850 @@
+
+--- Page 1 ---
+
+THE APPLICATIONS 
+L AYE RLaying the Groundwork
+ 1 The Big Picture
+The Information Layer
+ 2 Binary Values and Number Systems
+ 3 Data Representation
+The Hardware Layer
+ 4 Gates and Circuits
+ 5 Computing Components
+The Programming Layer
+ 6 Low-Level Programming Languages and Pseudocode
+ 7 Problem Solving and Algorithms
+ 8 Abstract Data Types and Subprograms
+ 9 Object-Oriented Design and High-Level Programming Languages
+The Operating Systems Layer
+ 10 Operating Systems
+ 11 File Systems and Directories
+The Applications Layer
+ 12 Information Systems
+ 13 Artificial Intelligence
+ 14 Simulation, Graphics, Gaming, and Other Applications
+The Communications Layer
+ 15 Networks
+ 16 The World Wide Web
+ 17 Computer Security
+In Conclusion
+ 18 Limitations of Computing
+
+--- Page 2 ---
+
+GOALS
+After studying this chapter, you should be able to:Most people interact with computers at the application level. That is, even 
+if a person doesn’t know anything about the details of the other underly-ing levels of computing, the chances are that he or she has used applica-tion software. Our goal at this level is to give you an appreciation for how various application systems work. Application software can be classified in several ways. In this chapter we focus on general information systems. In Chapter 13 we discuss applications in the realm of artificial intelligence, and in Chapter 14 we focus on simulations, graphics, and gaming.
+Computers exist to manage and analyze data. Today they affect  
+almost all aspects of our lives. We use general information systems to manage everything from sports statistics to payroll data. Likewise, cash registers and ATMs are supported by large information systems. In this chapter we examine general-purpose software, particularly spreadsheets and database management systems; these help us organize and analyze the huge amounts of data with which we must deal.INFORMATION 
+SYSTEMS
+ ■define the role of general information systems.
+ ■explain how spreadsheets are organized.
+ ■create spreadsheets for basic analysis of data.
+ ■define appropriate spreadsheet formulas using built-in functions.
+ ■design spreadsheets to be flexible and extensible.
+ ■describe the elements of a database management system.
+ ■describe the organization of a relational database.
+ ■establish relationships among elements in a database.
+ ■write basic SQL statements.
+ ■describe an entity-relationship diagram.
+ ■define and explain the role of e-commerce in society today.
+38712
+
+--- Page 3 ---
+
+12.1 Managing Information
+In this book we’ve used the term data to describe raw facts and information 
+to mean data that has been organized to help us answer questions and solve problems. An information system can be generally defined as soft-ware that helps us organize and analyze data.
+Turning data into information requires taking raw data sources and 
+organizing them into a useful form. The data may have to be classified, clustered, and transformed in various ways to make it meaningful. These are all activities of an information system.
+Often, managing information cannot be done alone. It’s typically a 
+collaborative process, working with colleagues and data experts to under -
+stand the sources of data and its importance from various perspectives. It’s rare for one person to have the understanding necessary to test the relevant hypotheses and interpret the results. You may tend to think of data analysis as a nerdy, solo activity, but the truth is it often takes many people to provide the insight needed. A good information system, there-fore, helps support such collaboration.
+Any particular application program manages data, and some pro-
+grams manage data in particular ways using particular structures. Other specialized applications use specific techniques that are geared toward the type of problems they are trying to solve. For example, as we discuss in the next chapter, data can be organized so as to support the analysis that typically occurs in the computing field of artificial intelligence.
+Most situations, however, are more general. In fact, innumerable sit-
+uations don’t require any special consideration. We simply have data to manage and relationships within that data to capture. These situations don’t necessarily require special organization or processing. What they do require, however, are flexible application software tools that allow the user to dictate and manage the organization of data, and that have basic processing capabilities to analyze the data in various ways.
+Three of the most popular general application information systems 
+are electronic spreadsheets, database management systems, and e-commerce. A 
+spreadsheet is a convenient tool for basic data analysis based on extensible formulas that define relationships among the data. Database management systems are geared toward managing large amounts of data that are often searched and organized into appropriate subsections.
+Entire books have been written about spreadsheets and how they are 
+set up and used. The same can be said for database management systems. Our goal for this chapter is not to exhaustively explore either of these sys-tems, but rather to introduce the usefulness and versatility of both. After this Information system 
+Software that helps the user organize and analyze data
+The Ellis Island Immigration Station processed arriving immigrants between  1892 and 1954. The Ellis Island website (www.ellisisland .org) has a searchable database that includes the name, age, country of origin, and even the ship on which each of the 25 million passengers arrived in the United States. It has been estimated that 40% of all current U.S. citizens can trace at least one of their ancestors to Ellis Island.Ellis Island ?388
+Chapter 12:  Information Systems
+
+--- Page 4 ---
+
+ discussion you should be able to create basic versions of either type of system, 
+and you will have a foundation on which to explore them in more detail.
+Spreadsheets and database management systems have been around 
+since the 1970s. Electronic commerce, by comparison, is newer, coming about with the advent of the World Wide Web. These systems manage all aspects of buying and selling on the Internet.
+12.2 Spreadsheets
+A variety of spreadsheet programs are available today. You may already have some experience with spreadsheets, though we don’t assume any background knowledge in this discussion. Each spreadsheet program has its own particular nuances regarding its abilities and syntax, but all spreadsheets embrace a common set of concepts. Our discussion in this chapter focuses on these common concepts. The specific examples that we  
+explore are consistent with the syntax and functionality of the Microsoft Excel spreadsheet program.
+A spreadsheet is a software application that allows the user to organ-
+ize and analyze data using a grid of labeled cells. A cell can contain data or a formula that is used to calculate a value. Data stored in a cell can be text, numbers, or “special” data such as dates.
+As shown in 
+FIGURE 12.1 , spreadsheet cells are referenced by their row 
+and column designation, usually using letters to specify the column and numbers to specify the row. Thus we refer to cells as, for example, A1, C7, and G45. After the 26th column, spreadsheets begin to use two let-ters for the column designation, so some cells have designations such as AA19. There is usually some reasonably large maximum number of rows in a spreadsheet, such as 256. Furthermore, in most spreadsheet programs, multiple sheets can be combined into one large interacting system.Spreadsheet A 
+program that allows the user to organize and analyze data using a grid of cells
+Cell An element of 
+a spreadsheet that can contain data or a formula
+FIGURE 12.1 A spreadsheet, made up of a grid of labeled cellsC B AD
+1
+234512.2 Spreadsheets389
+
+--- Page 5 ---
+
+Spreadsheets are useful in many situations, and they are often  
+designed to manage thousands of data values and calculations. Let’s look 
+at a small example that demonstrates fundamental spreadsheet principles. Suppose we have collected data on the number of students who came to get help from a set of tutors over a period of several weeks. We’ve kept track of how many students went to each of three tutors (Hal, Amy, and Frank) each week for a period of five weeks. Now we want to perform some basic analy-sis on that data. We might end up with the spreadsheet shown in 
+FIGURE 12.2 .
+This spreadsheet contains, among other things, the raw data to be ana-
+lyzed. Cell C4, for instance, contains the number of students whom Hal tutored in week 1. The column of data running from C4 to C8 contains the number of students tutored by Hal in each of the five weeks during which data was collected. Likewise, the data for Amy is stored in cells D4 through D8, and the data for Frank is stored in cells E4 through E8. This same data can be thought of in terms of the row it is in. Each row shows the number of students helped by each tutor in any given week.
+In cells C9, D9, and E9, the spreadsheet computes and displays the 
+total number of students helped by each tutor over all five weeks. In cells C10, D10, and E10, the spreadsheet also computes and displays the  
+average number of students helped by each tutor each week. Likewise, the total number of students helped each week (by all tutors) is shown in FIGURE 12.2 A spreadsheet containing data and computationsC B
+1
+2
+3
+45
+Total
+AvgA
+WeekDG F E
+Hal AmyTutor
+Avg Total Frank
+12 10 11.67 35 13
+14 16 15.33 46 16
+10 18 13.67 41 13
+82 1 15.67 47 18
+15 18 15.00 45 12
+59 83 71 .33 214 72
+11.80 16.60 14.27 42.80 14.40H
+12345
+6
+789
+10
+11
+12390
+Chapter 12:  Information Systems
+
+--- Page 6 ---
+
+the column of cells running from F4 to F8. The average number of stu-
+dents helped per week is shown in cells G4 to G8.
+In addition to the totals and averages per tutor and per week, the 
+spreadsheet calculates some other overall statistics. Cell F9 shows the total number of students helped by all tutors in all weeks. The average per week (for all tutors) is shown in cell F10, and the average per tutor (for all weeks) is shown in cell G9. Finally, the average number of students helped by any tutor in any week is shown in cell G10.
+The data stored in columns A and B and in rows 2 and 3 are simply 
+used as labels to indicate what the values in the rest of the spreadsheet represent. These labels are meant to enhance the spreadsheet’s human readability only and do not contribute to the calculations.
+Note that the labels and some of the values in the spreadsheet in 
+Figure 12.2 are shown in different colors. Most spreadsheet programs  
+allow the user to control the look and format of the data in specific cells in various ways. The user can specify the font, style, and color of the data as well as the alignment of the data within the cell (such as centered or left justified). In the case of real numeric values, such as the averages computed in this example, the user can specify how many decimal places should be displayed. In most spreadsheet programs, the user can also dic-tate whether the grid lines for each cell are displayed or remain invisible (in this example they are all displayed) and what the background color or pattern of a cell should be. All of these user preferences are specified with menu options or buttons in the spreadsheet application software.
+Spreadsheet Formulas
+In our example spreadsheet, we performed several calculations that gave us insight into the overall situation regarding tutor support. It turns out that it is relatively easy to set up these calculations. You might say that it wouldn’t take long to sit down with these numbers and produce the same statistics with a calculator, and you would be right. However, the beauty of a spreadsheet is that it is both easily modified and easily expanded.
+If we’ve set up the spreadsheet correctly, we could add or remove 
+tutors, add additional weeks of data, or change any of the data we have already stored—and the corresponding calculations would automatically be updated. For example, although we set up the tutor spreadsheet to use the data of three tutors, the same spreadsheet could be expanded to handle hundreds of tutors. Instead of five weeks of data, we could just as easily process a year’s worth.
+The power of spreadsheets comes from the formulas that we can  
+create and store in cells. All of the totals and averages in the example in 12.2 Spreadsheets391
+
+--- Page 7 ---
+
+Figure 12.2 are computed using formulas. When a formula is stored in 
+a cell, the result of the formula is displayed in the cell. Therefore, when we look at the values in a spreadsheet, it is sometimes challenging to tell whether the data shown in a particular cell was entered directly or com-puted by an underlying formula.
+FIGURE 12.3  shows the same spreadsheet as Figure 12.2, indicating the 
+formulas underlying some of the cells. Formulas in our examples (as in many spreadsheet programs) begin with an equal sign (
+=). That’s how the 
+spreadsheet knows which cells contain formulas that must be evaluated.
+The formulas in this example refer to particular cells (by their column 
+and row designation). When a formula is evaluated, the values stored in the referenced cells are used to compute the result. Formulas in a spread-sheet are reevaluated whenever the spreadsheet changes; therefore, the results are always kept current. A spreadsheet is dynamic—it responds to changes immediately. If we changed the number of students whom Frank tutored in week 2, the totals and averages that use that value would be recalculated immediately to reflect the revised data.
+Formulas can make use of basic arithmetic operations using the stand-
+ard symbols (
++, 2, *, and /). They can also take advantage of spreadsheet FIGURE 12.3 The formulas behind some of the cells
+Spreadsheet function 
+A computation provided by the spreadsheet software that can be incorporated into formulasC B
+1
+2
+3
+45
+Total
+AvgA
+WeekDG F E
+Hal AmyTutor
+Avg Total Frank
+12 10 11.67 35 13
+14 16 15.33 46 16
+10 18 13.67 41 13
+82 1 15.67 47 18
+15 18 15.00 45 12
+59 83 71 .33 214 72
+11.80 16.60 14.27 42.80 14.40H
+12345
+6
+789
+10
+11
+12
+=SUM(C4..C8) =E9/COUNT(E4..E8)=F9/COUNT(C4..E8)=F7/COUNT(C7 ..E7)=SUM(C4..E4)392
+Chapter 12:  Information Systems
+
+--- Page 8 ---
+
+functions that are built into the software. In the tutor example, the for -
+mula in cell C9 uses the SUM function to compute the sum of the values 
+in the cells C4, C5, C6, C7, and C8.
+Because functions often operate on a set of contiguous cells, spread-
+sheets provide a convenient way to specify a range of cells. Syntactically, a range is specified with two dots (periods) between the two cell end-points. A range can specify a set of cells along a row, such as C4..E4, or it can specify a set of cells down a column, such as C4..C8. A range can also specify a rectangular block of cells, ranging from the top left to the bottom right. For example, the range C4..E8 includes the cells C4 to C8, D4 to D8, and E4 to E8.
+Several of the formulas shown in Figure 12.3 use the COUNT func-
+tion, which computes the number of nonblank cells in the specified range. For example, the formula in cell G7 divides the value in cell F7 by the count of cells in the range C7..E7, which is 3.
+The formula in cell G7 could have been written as follows:
+=SUM(C7..E7)/3
+Given the current status of the spreadsheet, this formula would compute 
+the same result. However, this formula is not as good as the original, for two reasons. First, the sum of the values in C7 to E7 has already been com-puted (and stored in F7), so there is no need to recompute it. Any change to the data would affect the value of F7, and consequently change the value of G7 as well. Spreadsheets take all such relationships into account.
+Second (and far more important), it is always a good idea to avoid 
+using a constant in a formula unless it is specifically appropriate. In this case, using the value 3 as the predetermined number of tutors limits our ability to easily add or delete tutors from our analysis. Spreadsheet for -
+mulas respond to insertions and deletions just as they do to changes in raw data itself. If we insert a column for another tutor, the ranges in the original formulas in columns F and G (which would move to columns G and H due to the insertion) would automatically change to reflect the insertion. For example, if a new tutor column is inserted, the formula in cell F4 would be shifted to cell G4 and would now be
+=SUM(C4..F4)
+That is, the range of cells would increase to include the newly inserted 
+data. Likewise, the ranges used by the COUNT function in other functions would change, resulting in a new—and correct—average. If we had used the constant 3 in the formula of cell G7, the calculation would be incor -
+rect after the new column was inserted.
+Lively is a product 
+featuring sensors that can give feedback to children about an elderly parent who is living alone. For example, did the parent get something out of the refrigerator? Open the front door? Open a bottle of prescribed medicine? With the number of Americans age 65 or older projected to grow from 40 million in 2010 to 72 million in 2030, the need for such monitoring is bound to increase as well.
+1Another player in elder care?Range A set of contiguous cells specified by the endpoints12.2 Spreadsheets393
+
+--- Page 9 ---
+
+Usually a spreadsheet program provides a large number of functions 
+that we can use in formulas. Some perform math or statistical calcula-
+tions, common financial calculations, or special operations on text or dates. Others allow the user to set up logical relationships among cells. Examples of some common spreadsheet functions appear in 
+FIGURE 12.4 . 
+A typical spreadsheet program provides dozens of functions that the user may incorporate into formulas.
+Another dynamic aspect of spreadsheets is the ability to copy values 
+or formulas across a row or down a column. When formulas are copied, the relationships among cells are maintained. As a result, it becomes easy to set up a whole set of similar calculations. For instance, to enter the total calculations in our tutor example down the column from cell F4 to cell F8, we simply had to enter the formula in cell F4, and then copy that formula down the column. As the formula is copied, the references to the cells are automatically updated to reflect the row that the new for -
+mula is in. For our small example that tracks five weeks, the copy ability didn’t save that much effort. But imagine we were tracking this data for a whole year and had 52 summation formulas to create. The copy aspect of spreadsheets makes setting up that entire column a single operation.FIGURE 12.4 Some common spreadsheet functionsFunction Computes
+SUM(val1, val2, ...) 
+SUM(range)Sum of the specified set of values
+COUNT(val1, val2, ...) COUNT(range)Count of the number of cells that contain values
+MAX(val1, val2, ...) MAX(range)Largest value from the specified set of values
+SIN(angle) The sine of the specified angle
+PI() The value of pi
+STDEV(val1, val2, ...) STDEV(range)The standard deviation from the specified sample values
+TODAY() Today’s date
+LEFT(text, num_chars) The leftmost characters from the specified text
+IF(test, true_val, false_val) If the test is true, it returns the true_val; otherwise, it returns 
+the false_val
+ISBLANK (value) Returns true if the specified value refers to an empty cell394
+Chapter 12:  Information Systems
+
+--- Page 10 ---
+
+© Artur Debat/Getty Images; © Alan Dyer/Stocktrek Images/Getty ImagesMany of the people whose biographies appear 
+in this book have been winners of the ACM Turing Award, the highest award given in com-puter science. The ACM also gives an award for outstanding work done by someone younger than age 35, called the Grace Murray Hopper Award. The charge for this award reads:
+Awarded to the outstanding young com-puter professional of the year . . . selected on the basis of a single recent major tech-nical or service contribution. . . . The can-didate must have been 35 years of age or less at the time the qualifying contribution was made.
+Daniel Bricklin won the Hopper Award in 1981, with the following citation:
+For his contributions to personal com-puting and, in particular, to the design of VisiCalc. Bricklin’s efforts in the develop-ment of the “Visual Calculator” provide the excellence and elegance that ACM seeks to sustain through such activities as the Awards program.
+Daniel Bricklin, born in 1951, is a mem-
+ber of the computer generation. He began 
+his college career at the Massachusetts Insti-tute of Technology in 1969 as a math major, but quickly changed to computer science. He worked in MIT’s Laboratory for Computer Science, where he worked on interactive sys-tems and met his future business partner, Bob Franksten. After graduation, he was employed by Digital Equipment Corporation, where he worked with computerized typesetting and helped to design the WPS-8 word processing product.
+Bricklin enrolled in the 
+MBA program at the Harvard Business School in 1977. While there, he began to envision a program that could manipu-late numbers much in the same way that word processors manipulate text. As Bricklin realized, such a program would have an immense impact on the business world. He teamed up with his MIT buddy Franksten and turned the dream into a reality. With Bricklin doing the design and Franksten doing the programming, the pair created VisiCalc, the first spreadsheet program. In 1978, they formed Software Arts to pro-duce and market VisiCalc. In the fall of 1979, a version was made available for the Apple II for $100 per copy. A version for the IBM PC became available in 1981.
+Bricklin made the decision not to patent 
+VisiCalc, believing that software should not be proprietary. Although it didn’t own a patent on its product, the company grew to 125 employees in four years. Soon, however, another start-up named Lotus came out with a spreadsheet pack-age called Lotus 1-2-3, which was both more powerful and more user-friendly than Visi-Calc. Software Arts’ sales suffered. After a long, expensive court battle between Software Arts and VisiCorp (the company marketing VisiCalc), Bricklin was forced to sell to Lotus Software. In turn, Lotus 1-2-3 was surpassed by Microsoft’s Excel spreadsheet program. Both Lotus 1-2-3 and Excel were based on VisiCalc.
+Daniel Bricklin
+Courtesy of Louis Fabian Bachrach/Dan Bricklin12.2 Spreadsheets395
+
+--- Page 11 ---
+
+Circular References
+Spreadsheet formulas could be defined such that they create a circular 
+reference—that is, a reference that can never be resolved because the  
+result of one formula is ultimately based on another, and vice versa. For instance, if cell B15 contains the formula
+=D22+D23
+and cell D22 contains the formula
+=B15+B16
+there is a circular reference. Cell B15 uses the value in cell D22 for its 
+result, but cell D22 relies on B15 for its result.
+Circular references are not usually this blatant and may involve 
+many cells. A more complicated situation is presented in 
+FIGURE 12.5 . 
+Ultimately, cell A1 relies on cell D13 for its value, and vice versa. Spread-sheet software usually detects such a problem and indicates the error.
+© Artur Debat/Getty Images; © Alan Dyer/Stocktrek Images/Getty ImagesAfter working for a short time as a consult-
+ant with Lotus Software, Bricklin again formed a new company. As president of Software Gar -
+den, he developed a program for prototyping and simulating other pieces of software, which won the 1986 Software Publishers Association Award for “Best Programming Tool.” In 1990, he cofounded Slate Corporation to develop applica-tions software for pen computers—that is, small com
+ puters that use a pen rather than a keyboard 
+for input. After four years, Slate closed its doors, and Bricklin went back to Software Garden.
+In 1995, Bricklin founded Trellix Corpora-
+tion, a leading provider of private-label website publishing technology. Trellix was acquired by Interland, Inc., in 2003. In early 2004, Bricklin returned to Software Garden as president. In 2013, he joined Alpha Software as their chief technical officer.
+When Bricklin was asked to share his view 
+of the Internet, this was his reply: “Most peo-ple don’t understand it. They fail to grasp the capabilities of its underpinnings.” He likens the Net to a primitive road during the early days of the automobile, when few saw the potential that a massive interstate highway system might one day provide. “We need to understand not so much the technology,” he explains, “but the progression of technology and what might be built with it. E-commerce, like electricity or the telephone, simply enables us to use tech-nology to do what we now do, only better.”Daniel Bricklin (continued)
+FIGURE 12.5 A circular reference 
+situation that cannot be resolvedCell Contents
+A1 =B7*COUNT(F8..k8)
+B7 =A14+SUM(E40..E50)
+E45 =G18+G19–D13
+D13 =D12/A1Circular reference A set of formulas that ultimately, and erroneously, rely on each other to compute their results396
+Chapter 12:  Information Systems
+
+--- Page 12 ---
+
+Spreadsheet Analysis
+One reason why spreadsheets are so useful is their versatility. The user of 
+a spreadsheet determines what the data represents and how it is related to other data. Therefore, spreadsheet analysis can be applied to just about any topic area. We might, for instance, use a spreadsheet to perform the following tasks:
+ ■Track sales
+ ■Analyze sport statistics
+ ■Maintain student grades
+ ■Keep a car maintenance log
+ ■Record and summarize travel expenses
+ ■Track project activities and schedules
+ ■Plan stock purchases
+The list of potential applications is virtually endless. Business, in gen-eral, has a huge number of specific situations in which spreadsheet calculations are essential. It makes you wonder how we got along 
+ without them.
+Their dynamic nature also makes spreadsheets highly useful. If we set 
+up the spreadsheet formulas correctly, then our changes, additions, and deletions to the data are automatically taken into account by the appro-priate calculations.
+The dynamic nature of spreadsheets also provides the powerful ability 
+to carry out what-if analysis. We can set up spreadsheets that take into 
+account certain assumptions, and then challenge those assumptions by changing the appropriate values.
+As an example, suppose we are setting up a spreadsheet to estimate 
+the costs and potential profits for a seminar we are considering hold-ing. We can enter values for the number of attendees, ticket prices, cost of materials, room rental, and other data that affects the final results. Then we can ask ourselves some what-if questions to see how our sce-nario changes as the situation changes:
+What if the number of attendees decreased by 10%?What if we increased the ticket price by $5?What if we could reduce the cost of materials by half?
+As we ask these questions, we change the data accordingly. If we’ve set up the relationships among all of the formulas correctly, then each change immediately shows us how it affects the other data.What-if analysis 
+Modifying spreadsheet values that represent assumptions to see how changes in those assumptions affect related data12.2 Spreadsheets397
+
+--- Page 13 ---
+
+Business analysts have formalized this process in various ways, and 
+spreadsheets have become an essential tool in their daily work. Cost– 
+benefit analysis, break-even calculations, and projected sales estimates all become a matter of organizing the spreadsheet data and formulas to take the appropriate relationships into account.
+Spreadsheet Visualizations
+They say a picture is worth a thousand words. Well, that’s true about numbers, too. Reading raw data is often hard, and rarely provides the insight that a good visual representation of the data can. The goal of data analysis is to provide insight into the data that can be communicated to others.
+Modern spreadsheet applications usually provide a mechanism for 
+displaying the data in the spreadsheet in various types of graphs, such as line charts or pie charts. In fact, the number of graph types is often quite extensive, and allows you to tailor exactly how best to convey the ideas you want to emphasize. An example of a graph generated by Microsoft Excel is shown in 
+FIGURE 12.6 .
+As with “what if” analysis, as the data changes, the generated graphs 
+can change to reflect the modifications.
+FIGURE 12.6 A graph generated using spreadsheet data
+398
+Chapter 12:  Information Systems
+
+--- Page 14 ---
+
+12.3 Database Management Systems
+Almost all sophisticated data management situations rely on an under -
+lying database and the support structure that allows the user (either a 
+human or a program) to interact with it. A database can simply be defined as a structured set of data. A database management system (DBMS) is a combination of software and data made up of three components:
+ ■The physical database—a collection of files that contain the data
+ ■The database engine—software that supports access to and modifi-cation of the database contents
+ ■The database schema—a specification of the logical structure of the data stored in the database
+The database engine software interacts with specialized database lan-
+guages that allow the user to specify the structure of data; add, modify, and delete data; and query the database to retrieve specific stored data.
+The database schema provides the logical view of the data in the  
+database, independent of how it is physically stored. Assuming that the underlying physical structure of the database is implemented in an efficient way, the logical schema is the more important point of view from the data-base user’s perspective because it shows how the data items relate to each other.
+FIGURE 12.7  depicts the relationships among the various elements of 
+a database management system. The user interacts with the database  
+engine software to determine and/or modify the schema for the database. The user then interacts with the engine software to access and possibly modify the contents of the database stored on disk.
+The Relational Model
+Several popular database management models have been proposed, but the one that has dominated for many years is the relational model. In a 
+FIGURE 12.7 The elements of a database management 
+systemDatabase A structured set of data
+Database 
+management system A combination of software and data made up of the physical database, the database engine, and the database schema
+Query A request to 
+retrieve data from a database
+Schema A 
+specification of the logical structure of data in a database
+Relational model A 
+database model in which data and the relationships among them are organized into tables
+Database
+filesUserSchema
+Database
+engine
+software12.3 Database Management Systems399
+
+--- Page 15 ---
+
+relational DBMS, the data items and the relationships among them are 
+organized into tables. A table is a collection of records. A record is a collec-tion of related fields. Each field of a database table contains a single data value. Each record in a table contains the same fields.
+A record in a database table is also called a database object or an entity. 
+The fields of a record are sometimes called the attributes of a database 
+object.
+As an example, consider the database table shown in 
+FIGURE 12.8 , which 
+contains information about movies. Each row in the table corresponds to a record. Each record in the table is made up of the same fields in which particular values are stored. That is, each movie record has a MovieId, a Title, 
+a Genre, and a Rating that contains the specific data for each record. A data-
+base table is given a name, such as Movie in this case.
+Usually, one or more fields of a table are identified as key fields.  
+The key field(s) uniquely identifies a record among all other records  
+in the table. That is, the value stored in the key field(s) for each record in a table must be unique. In the Movie table, the MovieId field would be the 
+logical choice for a key. That way, two movies could have the same title. Certainly the Genre and Rating fields are not appropriate key fields in this case.
+Each value in the key field MovieId must be unique. Most DBMSs allow 
+such fields to be automatically generated to guarantee unique entries. The key values do not have to be consecutive, however. The last three entries of Table A collection of 
+database records
+Record (or object, or 
+entity) A collection of related fields that make up a single database entry
+Field (or attribute) 
+A single value in a database record
+Key One or more 
+fields of a database record that uniquely identifies it among all other records in the table
+FIGURE 12.8 The Movie database table, made up of records and fieldsMovieId Title Genre Rating
+101 Sixth Sense, The thriller horror PG-13
+102 Back to the Future comedy adventure PG
+103 Monsters, Inc. animation comedy G
+104 Field of Dreams fantasy drama PG
+105 Alien sci-fi horror R
+106 Unbreakable thriller PG-13
+107 X-Men action sci-fi PG-13
+5022 Elizabeth drama period R
+5793 Independence 
+Dayaction sci-fi PG-13
+7442 Platoon action drama war R400
+Chapter 12:  Information Systems
+
+--- Page 16 ---
+
+the table contain radically different movie identification numbers. As long 
+as they are unique values, the MovieId field can serve as the key.
+The Movie table in Figure 12.8 happens to be presented in the order of 
+increasing MovieId value, but it could have been displayed in other ways, 
+such as alphabetical by movie title. In this case, there is no inherent rela-tionship among the rows of data in the table. Relational database tables present a logical view of the data and have nothing to do with the under -
+lying physical organization (how the records are stored on disk). Ordering records becomes important only when we query the database for particu-lar values, such as all movies that are rated PG. At that point we might want to sort the results of the query by title.
+The structure of the table corresponds to the schema it represents. 
+That is, a schema is an expression of the attributes of the records in a table. We can express the schema for this part of the database as follows:
+Movie (MovieId:key, Title, Genre, Rating)
+Sometimes a schema representation indicates the type of data that 
+is stored in individual fields, such as numeric or text. It may also indi-
+cate the specific set of values that are appropriate for a given field. For  
+instance, the schema could indicate in this example that the Rating field can be only G, PG, PG-13, R, or NC-17. The schema for an entire database is made up of the individual schema that corresponds to individual tables.
+Suppose we wanted to create a movie rental business. In addition 
+to the list of movies for rent, we must create a database table to hold information about our customers. The Customer table in 
+FIGURE 12.9  could 
+represent this information.
+Similar to what we did with our Movie table, the Customer table con-
+tains a CustomerId field to serve as a key. The fact that some CustomerId 
+FIGURE 12.9 The Customer database table, containing customer dataHere’s another example 
+of a scam conducted by email: “I am Mr. Cham Tao Soon, Chairman Audit Committee of UOB Bank, Singapore. I have a project for you in the tons of One Hundred & Five Million EUR, after successful transfer, we shall share in the ratio of forty for you and sixty for me. Please reply for specifics.” Beware of anything that sounds too good to be true!
+2Won’t they ever stop??
+CustomerId Name Address CreditCardNumber
+101 Dennis Cook 123 Main Street 2736 2371 2344 0382
+102 Doug Nickle 456 Second Ave 7362 7486 5957 3638103 Randy Wolf 789 Elm Street 4253 4773 6252 4436
+104 Amy Stevens 321 Yellow Brick Road 9876 5432 1234 5678105 Robert Person 654 Lois Lane 1122 3344 5566 7788
+106 David Coggin 987 Broadway 8473 9687 4847 3784
+107 Susan Klaton 345 Easy Street 2435 4332 1567 323212.3 Database Management Systems401
+
+--- Page 17 ---
+
+© Artur Debat/Getty Images; © Alan Dyer/Stocktrek Images/Getty ImagesWhen you look on the packaging 
+of most products, you will find a Universal Product Code (UPC) and its associated bar code, such as the one shown to the right. UPC codes were created to speed up the process of purchasing a product at a store and to help keep better track of inventory.
+A UPC symbol is made up of the machine-  
+readable bar code and the corresponding human-readable 12-digit UPC number. The first six digits of the UPC number are the manufac-turer identification number. For example, General Mills has a manufacturer ID number of 016000. The next five digits are the item number. Each type of product, and each different packaging of the same product, is assigned a unique item number. For example, a 2-liter bottle of Coke has a different item number than a 2-liter bot-tle of Diet Coke, and a 10-ounce bottle of Heinz ketchup has a different item number than a 14-ounce bottle of Heinz ketchup.
+The last digit of the UPC code is the check 
+digit, which allows the scanner to determine whether it scanned the number correctly. After reading the number, a calculation is performed on the rest of the digits of the number to determine the check digit. The result is then verified against the actual check digit. (See Chapter 18 for more information  
+on check digits.)
+For some products, particu-
+larly small ones, a technique has been developed to create UPC 
+numbers that can be shortened by eliminating certain digits (all zeros). In this way, the entire UPC symbol can be reduced in size.
+Note that a product’s price is not stored in 
+the UPC number. When a product is scanned at a cash register—more formally called a point of sale  
+(POS)—the manufacturer and item numbers are used to look up that item in a database. The database might contain a great deal of product information, including its price. Keeping only basic information in the UPC number makes it easy to change other information, such as the price, without having to relabel the products. Unfortunately, this flexibility also makes it easy to create situations of “scanner fraud” in which the database price of an item does not match the price on the store shelf, whether intentionally or not.
+Universal Pro  duct Code
+A UPC symbol
+values correspond to some MovieId values is irrelevant. Key values must be unique only within a table.
+In a real database, we would be better off subdividing the Name field of 
+our Customer table into FirstName and LastName fields. Also, we would prob-
+ably use separate fields to hold various parts of a complete address, such as City and State. For our examples we are keeping things simple.
+The Movie table and the Customer table show how data can be 
+organized as records within isolated tables. The real power of relational 402
+Chapter 12:  Information Systems
+
+--- Page 18 ---
+
+ database management systems, though, lies in the ability to create tables 
+that conceptually link various tables together, as discussed in the next section.
+Relationships
+Recall that records represent individual database objects, and that fields of a record are the attributes of these objects. We can create a record to represent a relationship among objects and include attributes about the relationship in that record. In this way, we can use a table to represent a collection of relationships among objects.
+Continuing our movie rental example, we need to be able to repre-
+sent the situation in which a particular customer rents a particular movie. Because “rents” is a relationship between a customer and a movie, we can represent it as a record. The date rented and the date due are attrib-utes of the relationship that should be in the record. The Rents table in 
+FIGURE 12.10  contains a collection of these relationship records that repre-
+sents the movies that are currently rented.
+The Rents table contains information about the objects in the relation-
+ship (customers and movies), as well as the attributes of the relationship. It does not hold all of the data about a customer or a movie, however.  
+In a relational database, we avoid duplicating data as much as possible. For instance, there is no need to store the customer’s name and address in the rental table—that data is already stored in the Customer table. When we need that data, we use the CustomerId stored in the Rents table to look up the customer’s detailed data in the Customer table. Likewise, when we need data about the movie that was rented, we look it up in the Movie table using the MovieId.
+Note that the CustomerId value 103 is shown in two records in the 
+Rents table. Its two appearances indicate that the same customer rented two different movies.
+Data is modified in, added to, and deleted from our various database 
+tables as needed. When movies are added or removed from the available 
+FIGURE 12.10 The Rents database table, storing current movie rentalsCustomerId MovieId DateRented DateDue
+103 104 3-12-2018 3-13-2018
+103 5022 3-12-2018 3-13-2018
+105 107 3-12-2018 3-15-201812.3 Database Management Systems403
+
+--- Page 19 ---
+
+stock, we update the records of the Movie table. As people become new 
+customers of our store, we add them to the Customer table. On an ongoing basis, we add and remove records from the Rents table as customers rent 
+and return videos.
+Structured Query Language
+Structured Query Language (SQL) is a comprehensive database language 
+for managing relational databases. It includes statements that specify database schemas as well as statements that add, modify, and delete data-base content. In addition, as its name implies, SQL provides the ability to query the database to retrieve specific data.
+The original version of SQL was Sequal, developed by IBM in the 
+early 1970s. In 1986, the American National Standards Institute (ANSI) published the SQL standard, which serves as the basis for commercial database languages for accessing relational databases.
+SQL is not case sensitive, so keywords, table names, and attribute 
+names can be uppercase, lowercase, or mixed case. Spaces are used as separators in a statement. Because this is a specific programming lan-guage, we use a monospaced code font.
+Queries
+Let’s first focus on simple queries. The select statement is the primary tool for this purpose. The basic select statement includes a select clause, a from clause, and a where clause:
+select attribute-list  from table-list where condition
+The select clause determines which attributes are returned. The from 
+clause determines which tables are used in the query. The where clause restricts the data that is returned. For example:
+select Title from Movie where Rating = ‘PG’
+The result of this query is a list of all titles from the Movie table that have a PG rating. The where clause can be eliminated if no special restrictions are 
+necessary:
+select Name, Address from Customer
+This query returns the name and address of all customers in the Customer table. An asterisk (*) can be used in the select clause to denote that all attributes in the selected records should be returned:
+select * from Movie where Genre like ‘%action%’Structured Query 
+Language (SQL) A comprehensive relational database language for data management and queries404
+Chapter 12:  Information Systems
+
+--- Page 20 ---
+
+This query returns all attributes of records from the Movie table in which 
+the Genre attribute contains the word “action.” The like  operator in SQL 
+performs some simple pattern matching on strings, and the % symbol 
+matches any string.
+Select statements can also dictate how the results of the query should 
+be sorted using the order by clause:
+select * from Movie where Rating = ‘R’ order by Title
+This query returns all attributes of R-rated movies sorted by the movie title.
+SQL supports many more variations of select statements than are 
+shown here. Our goal is simply to introduce the database concepts—you would require much more detail to become truly proficient at SQL queries.
+Modifying Database Content
+SQL’s insert, update, and delete statements allow the data in a table to be 
+changed. The insert statement adds a new record to a table. Each insert state-ment specifies the values of the attributes for the new record. For example:
+insert into Customer values (9876, ‘John Smith’,  
+‘602 Greenbriar Court’, ‘2938 3212 3402 0299’)
+This statement inserts a new record into the Customer table with the spec-ified attributes.
+The update statement changes the values in one or more records of a 
+table. For example:
+update Movie set Genre = ‘thriller drama’ where title = 
+‘Unbreakable’
+This statement changes the Genre attribute of the movie Unbreakable to 
+“thriller drama.”
+The delete statement removes all records from a table matching the 
+specified condition. For example, if we wanted to remove all R-rated movies from the Movie table, we could use the following delete statement:
+delete from Movie where Rating = ‘R’
+As with the select statement, there are many variations of the insert, update, and delete statements.
+Database Design
+A database must be carefully designed from the outset if it hopes to fulfill its role. Poor planning in the early stages can lead to a database that does not support the required relationships.SQL incorporates 
+operations in an algebra that is defined for accessing and manipulating data represented in relational tables. E. F. Codd of IBM defined this algebra and he won the Turing Award for his work. SQL ’s fundamental operations include these:
+■  Select operation, to identify records in a table
+■  Project operation, to produce a sub-set of the columns in a table
+■  Cartesian product operation, to con-catenate rows from two tables
+Other operations include the set operations union, difference, intersection, natural join (a subset of Cartesian product), and division.Mathematical basis  of SQL?12.3 Database Management Systems405
+
+--- Page 21 ---
+
+One popular technique for designing relational databases is called  
+entity-relationship (ER) modeling. Chief among the tools used for ER 
+modeling is the ER diagram. An ER diagram captures the important  
+record types, attributes, and relationships in a graphical form. From an ER diagram, a database manager can define the necessary schema and create the appropriate tables to support the database specified by the diagram.
+FIGURE 12.11  presents an ER diagram showing various aspects of the 
+movie rental example. Specific shapes are used in ER diagrams to differ -
+entiate among the various parts of the database. Types of records (which can also be thought of as classes for the database objects) are shown in rectangles. Fields (or attributes) of those records are shown in attached ovals. Relationships are shown in diamonds.
+The positions of the various elements of an ER diagram are not par -
+ticularly important, though giving some thought to them will make the diagram easier to read. Note that a relationship such as Rents can have its own associated attributes.
+Also note that the relationship connectors are labeled, one side with 
+a 1 and the other side with an M. These designations show the cardinality constraint of the relationship. A cardinality constraint puts restrictions 
+on the number of relationships that may exist at one time. Three general cardinality relationships are possible:
+ ■One-to-one
+ ■One-to-many
+ ■Many-to-many
+The relationship between a customer and a movie is one-to-many. 
+That is, one customer is allowed to rent many movies, but a movie can be rented by only a single customer (at any given time). Cardinality con-straints help the database designer convey the details of a relationship.Entity-relationship 
+(ER) modeling A popular technique for designing relational databases
+ER diagram 
+A graphical representation of an ER model
+Cardinality constraint 
+The number of relationships that may exist at one time among entities in an ER diagram
+FIGURE 12.11 An ER diagram for the movie rental databaseCustomerId Name
+Address CreditCardNumberDateRented
+DateDueCustomer1 MRentsMovieId Title
+Genr eR atingMovie406
+Chapter 12:  Information Systems
+
+--- Page 22 ---
+
+Electronic commerce 
+The process of buying and selling products and services using the World Wide Web12.4 E-Commerce
+Computer applications in the realm of electronic commerce, or e-com-
+merce, deal with financial transactions made through the Web. It includes all aspects of the marketing, sales, and buying of both products and ser -
+vices as well as other financial services such as banking transactions. These days, the Web is often the first option for people considering a purchase.
+When the Web burst into public view in 1994, many people pre-
+dicted that it would have a large impact on the way we do business. In fact, it took several years for e-commerce to begin to be trusted enough, and become functional enough, to take root in our culture. The dot-com collapse of 2001, instead of diminishing e-commerce, seemed to promote it by clearing the way for organizations with legitimate busi-ness models to make a place for themselves online. During this period, in addition to new, purely online businesses cropping up, traditional “brick-and-mortar” businesses developed a significant online presence.
+Amazon.com, one of the oldest e-commerce sites on the Web, did not 
+make a profit for many years. But by persevering through (sometimes painful) growth spurts, it emerged as a premiere e-commerce destination for shoppers. eBay, a popular auction site, allowed anyone to sell their products online, even without an underlying formal business; today, many retailers conduct their transactions purely through the eBay environment. Companies such as PayPal, which make the process of online purchases much easier by abstracting the buyer’s financial details, were also key to e-commerce success. In fact, eBay purchased PayPal in 2002; like many online sites, eBay uses PayPal exclusively as its electronic payment system.
+The evolution of web-based technologies was a major factor in the 
+success of e-commerce and the driving force behind some of it. The ability for an online application to provide enhanced user interaction was critical in this growth, as was the development of secure protocols and other factors that permit the secure transfer of electronic funds.
+Electronic shopping carts are a key part of the e-commerce process, 
+allowing users to maintain an ongoing collection of items and purchase those items in a single transaction. Many e-commerce sites track a user’s purchases and make suggestions for other items that a user might find interesting. This is an aspect of e-commerce that is not easily replicated with traditional store purchases.
+Another important aspect to the success of e-commerce is the evo-
+lution of sellers’ understanding of how shoppers shop. That is, the best e-commerce sites now have facilities that allow a user to search for and compare items in various ways. Again, these functional aspects often sur -
+pass the user’s experience when visiting a physical store.
+Websites such as eBay 
+and Craigslist make it easy for people to sell unwanted goods. Some experts predict that the secondary auction industry may eventually change the way people think about what they buy. As it becomes easier to resell items, people may take this factor into consideration when purchasing an item. This trend could lead to temporary ownership of increasingly more goods, with people effectively “leasing” things rather than buying items and later discarding them. Secondhand shopping?407
+12.4 E-Commerce
+
+--- Page 23 ---
+
+One of the biggest challenges that remains for e-commerce is the need 
+to ensure security in the financial transactions inherent in the process. Many 
+people still have strong misgivings about conducting business online, but trust in online transactions has grown rapidly. Indeed, the need for computer security is greater than ever. 
+12.5 Big Data
+The information systems discussed in this chapter can deal with a lot of data, but the digital age has changed the playing field in many ways. We generate data with almost every action we take. When we buy something online, when we post on social media, when we carry our phones with GPS tracking capabilities, we leave a digital trail. Experts suggest that every two days, human beings collectively generate as much data as we did from the beginning of time until the year 2000.
+This situation has given rise to the term big data, which refers to 
+data sets that are so large and complex that information systems we’ve discussed so far such as spreadsheets and databases are inadequate to deal with them. The specifics of big data techniques are beyond the scope of this book, but it’s crucial to understand big data’s growing importance.
+Big data can lead to big insight. The more you know about something, 
+the better you can manage and guide it as desired. Big data techniques allow us to compare more data, revealing relationships that were previ-ously hidden.
+The benefits of big data are numerous to commercial businesses. The 
+additional insights can reveal what customers want to buy, and when, and can help companies run more efficiently. In the future, businesses that adopt a data-driven outlook and view data as a strategic asset will have a distinct advantage over those that don’t.
+Big data is also having a big impact beyond traditional business mod-
+els. Healthcare organizations are using big data solutions to analyze vast numbers of medical records and images, which helps diagnose diseases and develop new medicines. Huge amounts of sensor data are being used to predict and respond to natural disasters. Police forces are using both public and private data sets to predict and prevent crime.
+But that new insight comes at a price. There are many challenges 
+when it comes to big data:
+ ■Large data sets often contain different kinds of data—not just basic numeric data, text, and images, but also multimedia elements such as audio, video, and animations.
+ ■Storing large amounts of data requires massive amounts of sec-ondary memory.Big data Large 
+data sets that defy conventional management solutions such as spreadsheets and databases.408
+Chapter 12:  Information Systems
+
+--- Page 24 ---
+
+© Artur Debat/Getty Images; © Alan Dyer/Stocktrek Images/Getty Images
+ ■Selecting and organizing that data so it can be analyzed and 
+turned into meaningful information requires significant processing power.
+ ■Protecting big data, which often contain sensitive personal infor-mation, requires careful technological and logistical planning.
+An information system that is set up to handle big data must be able 
+to scale quickly and adequately; that is, as new data arrives, the tech-niques used by the information system must be able to handle the load. If an information system cannot scale sufficiently, it will restrict how the data can be used, if not grind to a halt.
+Therefore, the ability to handle big data requires careful planning and 
+specific computational solutions. It often involves an automated process that creates simulations based on the data and rerunning those simula-tions until patterns emerge.
+It is likely that spreadsheets and databases will always play an import-
+ant role in computing. Not all problems require a big data solution. How-ever, it is crucial to understand the ever-increasing role that big data plays in the future of computing.
+SUMMARY
+An information system is application software that allows the user to organize and manage data. General information system software includes spreadsheets and database management systems. Other domain areas, such as artificial intelligence, have their own specific techniques and sup-port for data management.
+A spreadsheet is a software application that sets up a grid of cells to 
+organize data and the formulas used to compute new values. Cells are referenced by their row and column designations, such as A5 or B7. For -
+mulas usually refer to the values in other cells and may rely on built-in functions to compute their result. In addition, formulas may use data across a range of cells. When a formula is stored in a spreadsheet cell, the value computed by the formula is actually shown in the cell. It is impor -
+tant that formulas in a spreadsheet avoid circular references, in which two or more cells rely on one another to compute their results.
+Spreadsheets are both versatile and extensible. They can be used in 
+many different situations, and they respond dynamically to change. As values in the spreadsheet change, affected formulas are automatically recalculated to produce updated results. If spreadsheet rows or columns are added, the ranges in spreadsheet formulas are adjusted immediately. 409
+Summary
+
+--- Page 25 ---
+
+Spreadsheets are particularly appropriate for what-if analysis, in which 
+assumptions are modified to see their effect on the rest of the system.
+A database management system includes the physical files in which 
+the data are stored, the software that supports access to and modification of that data, and the database schema that specifies the logical layout of the database. The relational model is the most popular database approach today. It is based on organizing data into tables of records (or objects) with particular fields (or attributes). A key field, whose value uniquely iden-tifies individual records in the table, is usually designated for each table.
+Relationships among database elements are represented in new tables 
+that may have their own attributes. Relationship tables do not duplicate data in other tables. Instead, they store the key values of the appropriate database records so that the detailed data can be looked up when needed.
+Structured Query Language (SQL) is the language used for querying 
+and manipulating relational databases. The select statement is used to formulate queries and has many variations so that particular data can be accessed from the database. Other SQL statements allow data to be added, updated, and deleted from a database.
+A database should be carefully designed. Entity-relationship modeling, 
+with its associated ER diagrams, is a popular technique for database design. ER diagrams graphically depict the relationships among database objects and show their attributes and cardinality constraints.
+E-commerce is the process of buying and selling services over the 
+Internet. As e-commerce has become increasingly more popular, more stringent security measures have had to be employed to ensure the integ-rity of sales over the Internet.
+Big data is the term used to describe the management of large sets 
+of data that defy traditional solutions such as spreadsheets and database management systems. The insights that big data techniques can yield are important, but require us to overcome the challenges of storing, manag-ing, and analyzing more data than human beings have ever had to deal with before.410
+Chapter 12:  Information Systems
+
+--- Page 26 ---
+
+The Internet has changed the way polit-
+ical campaigns are run. Just looking at the last few presidential campaigns shows the incredible impact the use of network resources has had, affecting campaign finances, politicians’ behavior, and voter opinions. 
+A single-day record for raising campaign 
+contributions was set by Ron Paul (Repub-lican), who collected $6 million in one day in 2007 through Internet donations. More notable was Howard Dean (Democrat), who used the Internet as a fundamental tool in his “50-state strategy” primary run in 2004. Although Dean was ultimately defeated in the election, none could deny his success at raising funds through his pioneering Inter -
+net campaign of a “$100 revolution,” in which 2 million Americans would give $100 to Dean’s campaign so he could compete with the Republican candidate, George W. Bush. In 2008, Barack Obama, taking a lead from Dean’s emphasis on small donors and the Internet, raised almost half of his $639 million in campaign funds from 3 million donors who gave $300 or less. Understand-ing that a successful campaign is run on its cash flow, Obama’s staff directed much of its social networking and Internet time toward raising campaign funds.
+In the 2008 campaign, the websites of 
+both candidates became the primary focal points where their supporters campaigned for them and undecided voters went to get information. Both campaigns used social media as never before, and relied on thou-sands of personal blogging sites and forums to get their message out. The Internet allows candidates to quickly respond to negative feedback by quickly adding or editing text and video.
+In 2012, it was generally agreed that 
+Obama won the election through his team’s use of data mining the Internet. To quote Time, “Data-driven decisionmaking played a huge role in creating a second term for the 44th
+ president and will be one of the more 
+closely studied elements in the 2012 cycle.” For the 2012 race, Obama’s campaign man-ager, Jim Messina, promised a metric-driven kind of campaign. The campaign’s analytics department was five times larger than that of the 2008 campaign. For two years they collected, stored, and analyzed data. This data collection and mining effort helped Obama raise $1 billion, created detailed models of swing-state voters, and updated the process of targeting TV ads.
+3
+The 2016 national election saw the 
+Internet affect presidential politics in new and sometimes disturbing ways. Not only was fundraising and information sharing through the Internet at its peak, but mes-sages delivered by a politician to the elector -
+ate took an interesting turn. Politicians have always found ways to denigrate their oppo-nents, but Donald Trump did so using social media in ways never seen before.
+During the Republican primary pro-
+cess, Donald Trump used Twitter to call his Politics and the InternetETHICAL ISSUES411
+Ethical Issues: Politics and the Internet
+
+--- Page 27 ---
+
+opponents names. Marco Rubio was “Little 
+Marco,” Ted Cruz was “Lyin’ Ted,” and Jeb Bush was “Low-Energy Jeb.” As it became increasingly clear that Trump would win the primary, he turned his sights on the Democrats, calling Hillary Clinton “Crooked Hillary” and Bernie Sanders “Crazy Bernie.”
+Trump’s use of social media shocked 
+many, who saw it as unpresidential and compared it to cyberbullying. His support-ers, however, reveled in it, saying they liked how Trump “tells it like it is.” Many peo-ple assumed that Trump would eventually soften his rhetoric, but that didn’t happen. After he won the presidential election, he continued to use Twitter on a daily basis, bashing those who opposed him or his posi-tions.
+During his presidency, Trump’s staff 
+was sometimes surprised to learn of a policy decision via a tweet, causing them to scram-ble. In 2018, then-Secretary of State Rex Tillerson found out he was being fired only when Trump tweeted about it.
+4Donald Trump’s use of Twitter contin-
+ues to have a significant impact on day-to-day activities in the U.S. government, and the debate continues as to whether the effects are positive or negative.
+Other countries are also able to affect 
+our elections using social media. U.S. intel-ligence agencies agree that the Russian government interfered in the 2016 presi-dential election to damage Hillary Clinton’s campaign and bolster the candidacies of her opponents. 
+Among other activities, the Russian gov-
+ernment actively disseminated fake news through social media outlets such as Face-book using accounts created specifically for that purpose and with online advertisements (paid for using Russian rubles).
+5
+At the time of this writing, an investiga-
+tion led by special prosecutor Robert Mueller is ongoing, examining the Russian interfer -
+ence and exploring any links or coordination between Donald Trump’s campaign and the Russian government.Politics and the Internet (CONTINUED)ETHICAL ISSUESChapter 12:  Information Systems412
+
+--- Page 28 ---
+
+Big data
+Cardinality constraintCellCircular referenceDatabaseDatabase management systemElectronic commerceEntity-relationship (ER) modelingER diagramField (or attribute)Information systemKey (database)QueryRangeRecord (or object, or entity)Relational modelSchemaSpreadsheetSpreadsheet functionStructured Query Language (SQL)TableWhat-if analysis
+KEY TERMS
+© Artur Debat/Getty Images; © Alan Dyer/Stocktrek Images/Getty Images
+EXERCISES
+© Artur Debat/Getty Images; © Alan Dyer/Stocktrek Images/Getty Images
+For Exercises 1–20, mark the answers true or false as follows:
+ A. True
+ B. False
+ 1. A cell in a spreadsheet can contain only raw data.
+ 2. The values in a spreadsheet can be formatted in a variety of ways.
+ 3. A spreadsheet should be set up so that changes to the data are automatically reflected in any cells affected by that data.
+ 4. A spreadsheet function is a program that the user writes to compute a value.
+ 5. A range of cells can be specified that go horizontally or vertically, but not both.
+ 6. A circular reference in a spreadsheet is a powerful and useful tool. 7. A spreadsheet is useful for performing what-if analysis.
+ 8. What-if analysis can affect only one value at a time in a spreadsheet.
+ 9. A database engine is software that supports access to the database contents.
+ 10. The physical database represents the logical structure of the data in the database.
+ 11. A query is a request to a database for information.
+ 12. The results of a query can be structured in many ways.
+ 13. The hierarchical model is the most popular database management model today.
+ 14. A database table is a collection of records, and a record is a collection of fields.413
+Exercises
+
+--- Page 29 ---
+
+EXERCISES (CONTINUED)
+© Artur Debat/Getty Images; © Alan Dyer/Stocktrek Images/Getty Images
+ 15. The values in the key fields of a table 
+uniquely identify a record among all other records in the table.
+ 16. A database engine often interacts with a particular language for accessing and modifying the database.
+ 17. An entity-relationship (ER) diagram represents primary database elements in a graphical form.
+ 18. The cardinality of a relationship puts restrictions on the number of relationships that can exist at one time.
+ 19. E-commerce is the process of keeping financial records, such as accounts payable, online.
+ 20. The dot-com collapse promoted electronic commerce.
+For Exercises 21–25, match the solution to the question.
+ A. dynamic  D. range
+ B. function  E. schema
+ C. circular  F. field
+ 21. A spreadsheet is ____ in that it responds to changes in the data by immediately updating all affected values.
+ 22. A spreadsheet formula may  
+operate on a ____ of cells, such as C4..C18.
+ 23. The database ____ is the specification of the logical structure of the data in the database. 24. A ____ reference occurs when the result of one formula is ultimately based on another, and vice versa.
+ 25. A ____ contains a single data  value.
+Exercises 26–38 are problems or short-answer questions.Use the following spreadsheet containing student grades for Exercises 26–34.
+ 26. Specify the grades for Exam 2.
+ 27. Specify the average for Exam 1.
+ 28. Specify the average for Sarah.
+ 29. Specify the third exam grade for Mari.
+ 30. Specify the exam grades for Suzy.
+ 31. What formula is stored in F15?
+ 32. D16 contains the formula D15/COUNT(D4..D14). What is another 
+
+$ %& '( )* +
+([DP ([DP*UDGHV
+([DP $YHUDJH
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  %LOO
+%RE
+&KULV
+6WXGHQWV
+7RWDO
+$YHUDJH-LP
+-XG\
+-XQH
+0DUL
+0DU\
+3KLO
+6DUDK
+6X]\
+
+   Chapter 12:  Information Systems414
+
+--- Page 30 ---
+
+formula that would yield the same 
+value?
+ 33. What formula is stored in E13?
+ 34. Which values would change if Phil’s Exam 2 score was corrected to 87?
+ 35. What is a spreadsheet circular reference? Why is it a problem?
+36.
+  Give a specific example of an indirect circular reference similar to the one shown in Figure 12.5.
+37.
+  What is what-if analysis?
+38.  Name some what-if analysis questions that you might ask if you were using a spreadsheet to plan and track some stock purchases. Explain how you might set up a spreadsheet to help answer those questions.
+For Exercises 39–42, use the paper spreadsheet form supplied on the textbook’s website or use an actual spreadsheet application program to design the spreadsheets. Your instructor may provide more specific instructions regarding these questions.
+ 39. Design a spreadsheet to track the statistics of your favorite major league baseball team. Include data regarding runs, hits, errors, and runs batted in (RBIs). Compute appropriate statistics for individual players and the team  
+as a whole.
+ 40. Design a spreadsheet to maintain a grade sheet for a set of students. Include tests and projects, giving various weights to each in the calcu
+ -
+lation of the final grade for each student. Compute the average grade per test and project for the whole class.
+ 41. Assume you are going on a business trip. Design a spreadsheet to keep track of your expenses and create a summary of your totals. Include various aspects of travel such as car mileage, flight costs, hotel costs, and miscellaneous expenses (such as taxis and tips).
+ 42. Design a spreadsheet to estimate and then keep track of a particular project’s activities. List the activities, the estimated and actual dates for those activities, and schedule slippage or gain. Add other data as appropriate for your project.
+ 43. Compare a database with a database management system.
+ 44. What is a database schema?
+ 45. Describe the general organization of a relational database.
+ 46. What is a field (attribute) in a database?
+ 47. Which other fields (attributes) might we include in the database table of Figure 12.8?
+ 48. Which other fields (attributes) might we include in the database table of Figure 12.9?
+ 49. What is a key in a relational database table?
+© Artur Debat/Getty Images; © Alan Dyer/Stocktrek Images/Getty ImagesEXERCISES (CONTINUED)415
+Exercises
+
+--- Page 31 ---
+
+EXERCISES (CONTINUED)
+© Artur Debat/Getty Images; © Alan Dyer/Stocktrek Images/Getty Images
+ 50. Specify the schema for the database 
+table of Figure 12.9.
+ 51. How are relationships represented in a relational database?
+ 52. Define an SQL query that returns all attributes of all records in the Customer table.
+ 53. Define an SQL query that returns the MovieId number and title of all movies that have an R rating.
+ 54. Define an SQL query that returns  the address of every customer in  the Customer table who lives on  Lois Lane.
+ 55. Define an SQL statement that inserts the movie Armageddon into the Movie table.
+ 56. Define an SQL statement that changes the address of Amy Stevens in the Customer table.
+ 57. Define an SQL statement that deletes the customer with a CustomerId of 103.
+ 58. What is an ER diagram?
+ 59. How are entities and relationships represented in an ER diagram? 60. How are attributes represented in an ER diagram?
+ 61. What are cardinality constraints, and how are they shown in ER diagrams?
+ 62. What are the three general cardinality constraints?
+ 63. Design a database that stores  
+data about the books in a library,  the students who use them, and  
+the ability to check out books for  
+a period of time. Create an ER diagram and sample tables.
+ 64. Design a database that stores data about the courses taught at a university, the professors who teach those courses, and the students who take those courses. Create an ER diagram and sample tables.
+ 65. What were some of the web-based technologies that allowed e-commerce to become viable?
+ 66. What is big data? How does it relate to spreadsheets and databases?
+ 67. Name three challenges in big data analysis.Chapter 12:  Information Systems416
+
+--- Page 32 ---
+
+ 1. Other than the examples given in 
+this chapter, think of five situations for which you might set up a spreadsheet.
+ 2. Other than the examples given in this chapter, think of five situations for which you might set up a database.
+ 3. Does the use of computerized databases mean that we can do  away with paper files? What  sorts of paper files might still be needed?
+ 4. One of the reasons that U.S. elections are so costly is that they cover such a large span of time. The United Kingdom has only about six weeks in which the candidates campaign. Would shortening the election cycle be a good idea? Does the use of the Internet to disseminate information affect your answer?
+ 5. How has the Internet changed the funding of political campaigns? Is the change in funding a good or a bad thing?
+ 6. Were you actively involved in any recent elections? From where did you get your information? How do you think those sources of information influenced your positions?
+ 7. Is the Internet helping or hurting the democratic process?
+ 8. Do you think that the Internet has supported political extremes?
+ 9. What do you think of Donald Trump’s use of Twitter?
+THOUGHT QUESTIONS
+© Artur Debat/Getty Images; © Alan Dyer/Stocktrek Images/Getty Images417
+Thought Questions
