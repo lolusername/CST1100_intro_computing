@@ -2,7 +2,7 @@
 
 Purpose: Continue the research paper launched in Week 12 by drafting the opening paragraphs of Formal Writing Assignment #1. You should already have a topic and preliminary sources; today’s goal is to leave with an intro, a first body paragraph, and peer feedback to guide revision.
 
-## Part 1: Draft the introduction (20 minutes)
+## Part 1: Draft the introduction 
 1. Add a working title that hints at your angle.  
 2. Write 5–7 sentences that do the following:
    - Hook or context: a vivid fact, question, or scenario that frames the issue.
@@ -13,7 +13,7 @@ Purpose: Continue the research paper launched in Week 12 by drafting the opening
 
 Thesis gut-check: Is it arguable (not a fact), specific (names the who/what/where), and scoped to what you can cover in 4–6 pages?
 
-## Part 2: Mid-class peer review — introductions (20 minutes)
+## Part 2: Mid-class peer review — introductions - 30 mins in  for ten mis
 - Swap intros with a partner (or group of three if uneven). Use comments/suggesting mode.
 - Reviewer prompts:
   - Can you restate the topic and stakes in your own words?
@@ -22,14 +22,14 @@ Thesis gut-check: Is it arguable (not a fact), specific (names the who/what/wher
   - Are any claims unsupported or vague (needs a source)? Flag them.
 - Writer action: jot two takeaways you will address before moving on.
 
-## Part 3: Draft the first body paragraph (20–25 minutes)
+## Part 3: Draft the first body paragraph 
 1. Topic sentence: a claim that directly supports the thesis (not a fact about the source).  
 2. Evidence: integrate at least one quote **or** paraphrase from a credible source with MLA in-text citation. Use a signal phrase (e.g., According to ___).  
 3. Analysis: explain how the evidence advances your claim; connect back to the thesis.  
 4. Link out: a closing sentence that hints at the next paragraph or implication.  
 5. Avoid dropped quotes; sandwich evidence with your own sentences before and after.
 
-## Part 4: Debrief and exit ticket (5 minutes)
+## Part 4: Debrief and exit ticket 
 - Add one comment to your doc with the revision you will make tonight.
 - Note one source you still need (type + where you’ll look).
 - Upload your doc to the LMS or share with the instructor before leaving.
