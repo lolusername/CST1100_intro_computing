@@ -16,6 +16,7 @@
 
 ## Materials
 - Guided Colab notebook: `week_16/Week16_Python_Conditionals.ipynb`
+- Open in Colab: https://colab.research.google.com/drive/1BJWskEZ69eWgAm0R8jT7vlDkJvvQDfu1?usp=sharing
 - Slide deck: `week_16/Week16_Conditionals.pptx`
 
 ## Activities
@@ -25,7 +26,7 @@
 - Mini “predict before run” exercises to connect truth tables to `if` paths.
 
 ## Deliverable (Due Next Class)
-- Complete the notebook prompts (run all cells, fill in the exercises) and export/share the notebook or a PDF. Keep code commented and include your short written answers where requested.
+- Complete the notebook prompts (run all cells, fill in the exercises) and export/share the notebook or a PDF. Keep code commented and include your short written answers (wrap-up writing portion) where requested, and post those wrap-up responses in Brightspace.
 
 ## Tips
 - Write out expected True/False for each expression before running the cell.
